@@ -1,0 +1,35 @@
+# 1) Variáveis de ambiente
+.env
+
+# 2) Cache e arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3) Virtualenv / venv
+.venv/
+venv/
+env/
+DataBaseWhatsapp/
+
+# 4) Logs e caches de teste
+*.log
+.pytest_cache/
+.cache/
+
+# 5) Coverage e build
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# 6) IDEs e editores
+.vscode/
+.idea/
+*.suo
+*.swp
+
+# 7) Arquivos do sistema
+.DS_Store
+Thumbs.db
