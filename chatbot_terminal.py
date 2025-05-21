@@ -1,17 +1,16 @@
-import os
+import os, sys
+proj_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if proj_root not in sys.path:
+    sys.path.insert(0, proj_root)
+
 import re
 import time
 import traceback
-from dotenv import load_dotenv
-import openai
+from DatabaseWhatsapp.db import get_thread_by_user_and_assistant, create_thread_db, log_message, fetch_history, get_or_create_user
 
-from DatabaseWhatsapp.db import (
-    get_or_create_user,
-    get_thread_by_user_and_assistant,
-    create_thread_db,
-    log_message,
-    fetch_history
-)
+from dotenv import load_dotenv
+
+import openai
 
 # 1) Carrega .env e chave
 load_dotenv()
